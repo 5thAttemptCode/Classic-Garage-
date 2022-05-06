@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+/* _______________________ROOTS_________________________ */
+:root{
+    --bg-col: rgb(62, 62, 58);
+    --bg2-col: rgb(153, 153, 132);
+    --bg3-col: rgb(59, 11, 11);
+    --font-col: beige;
+    --dark-col: #141414;
+    --cta-col: #2C5784;
+    --cta-col-hov:#7191aa;
+
+    --classic-ff: 'Cormorant SC', serif;
+
+    --tran-time: all 0.4s;
+    --tran2-time: all 0.7s;
+
+    --h1-size: clamp(1.875rem, 0.75rem + 4vw, 3.75rem);
+    --h2-size: clamp(1.5625rem, 1.375rem + 0.6667vw, 1.875rem);
+    --h3-size: clamp(1rem, 0.775rem + 0.8vw, 1.375rem);
+
+    --big-cta-width: clamp(9.375rem, 7.5rem + 6.6667vw, 12.5rem);
+    --big-cta-height: clamp(2.5rem, 1.75rem + 2.6667vw, 3.75rem);
+
+    --cta-width: clamp(7.5rem, 6.75rem + 2.6667vw, 8.75rem);
+    --cta-height: clamp(2.5rem, 2.125rem + 1.3333vw, 3.125rem);
+}
+
+
+/* ____________________GENERAL SETTINGS____________________________ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    text-decoration: none;
+    color: var(--font-col);
+    scroll-behavior: smooth;
+    line-height: 1.2;
+    font-size: clamp(0.75rem, 0.6rem + 0.5333vw, 1rem);
+}
+
+body{
+    width: 100%;
+    background: var(--bg-col);
+}
+
+section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding: 0 5vw;
+}
+
+h1{
+    font-family: var(--classic-ff);
+    font-size: var(--h1-size);
+}
+
+h2{
+    font-family: var(--classic-ff);
+    font-size: var(--h2-size);
+    font-weight: 800;
+}
+
+h3{
+    font-weight: 300;
+    font-size: var(--h3-size);
+}
+
+p{
+    text-align: justify;
+}
+
+.cta{
+    border: 1px solid white;
+    width: var(--cta-width);
+    height: var(--cta-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cta-col);
+    transition: var(--tran-time);
+}
+
+.cta:hover{
+    background: var(--cta-col-hov);
+}
+
+.intext-btn{
+    text-decoration: underline;
+    color: var(--cta-col);
+    font-weight: 600;
+}
+
+
+/* _________________________NAVBAR______________________________ */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    border-bottom: 2px solid var(--dark-col);
+    background: var(--bg-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: var(--tran2-time);
+}
+
+nav.active{
+    height: 100%;
+}
+
+nav .logo{
+    position: fixed;
+    top: 4%;
+}
+
+nav .logo a{
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: var(--classic-ff);
+}
+
+nav ul{
+    position: absolute;
+    right: 2.5%;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul.active {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    gap: 3vh;
+    justify-content: center;
+}
+
+nav ul.active a{
+    font-size: 20px;
+}
+
+nav .logo a, nav .logo a i, 
+nav ul a{
+    transition: var(--tran-time);
+}
+
+nav .logo a:hover, 
+nav ul a:hover{
+    color: var(--cta-col-hov);
+}
+
+nav .logo a:hover i{
+    transform: rotate(-90deg);
+}
+
+.menu-btn{
+    position: fixed;
+    top: 5%;
+    left: 2.5%;
+    z-index: 100000;
+    opacity: 0;
+    cursor: pointer;
+    transition: var(--tran-time);
+}
+
+.menu-btn:hover{
+    color: var(--cta-col);
+}
+
+
+/* _______________________HOME_________________________ */
+#home .container .heading{
+    position: absolute;
+    left: 0;
+}
+
+#home .container .heading h3{
+    text-align: justify;
+}
+
+#home .container .heading .discover-btn{
+    border: 2px solid var(--font-col);
+    font-size: var(--big-cta-font);
+    height: var(--big-cta-height);
+    width: var(--big-cta-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cta-col);
+    transition: var(--tran-time);
+}
+
+#home .container .heading .discover-btn:hover{
+    box-shadow: 0px 12px 5px -9px var(--dark-col);
+    background: var(--cta-col-hov);
+}
+
+#home .col-box{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    outline: 2px solid var(--dark-col);
+    outline-offset: 5px;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 50%;
+    background: var(--bg3-col);
+    overflow-x: hidden;
+}
+
+#home .col-box img{
+    position: absolute;
+    right: -30%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+#home .col-box .favorite{
+    position: absolute;
+    left: 5vw;
+    top: 5vw;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    z-index: 1000;
+}
+
+#home .col-box .facts{
+    position: fixed;
+    bottom: 2vh;
+    left: 4vw;
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+#home .col-box .facts ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    list-style: circle;
+}
+
+
+/* _______________________CARS_________________________ */
+#cars{
+    height: 140vh;
+    gap: 5vh;
+}
+
+#cars .container{
+    height: 90%;
+    width: 70%;
+    display: grid;
+    gap: 5vh;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#cars .car-details{
+    background: var(--bg2-col);
+    height: 100%;
+    width: calc(100 / 3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark-col);
+    transition: var(--tran2-time);
+}
+
+#cars .car-details:hover{
+    background: var(--bg3-col);
+    border: 2px solid var(--font-col);
+    box-shadow: 0px 12px 5px -9px var(--dark-col);
+    transform: scale(1.01);
+}
+
+#cars .car-details:hover h3{
+    color: var(--font-col);
+}
+
+#cars .car-details h3{
+    text-align: center;
+    color: var(--dark-col);
+    font-weight: 500;
+    transition: var(--tran2-time);
+}
+
+#cars .car-details .box{
+    padding: 0;
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cars .car-details .photo {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cars .car-details .photo img{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: var(--tran2-time);
+}
+
+#cars .car-details:hover .photo img{
+    filter: none;
+}
+
+#cars .car-details:nth-child(2) .photo img,
+#cars .car-details:nth-child(3) .photo img,
+#cars .car-details:nth-child(6) .photo img{
+    transform: scale(1.3);
+}
+
+#cars .car-details:nth-child(2) .photo img{
+    top: -20px;
+}
+
+#cars .car-details:nth-child(3) .photo img{
+    top: -15px;
+}
+
+
+/* _______________________ABOUT_________________________ */ 
+#about .container .box h3{
+    font-style: italic;
+}
+
+#about .container .us{
+    padding: 5vw;
+    text-align: justify;
+}
+
+#about .container .photo{
+    padding: 5vw 0;
+    align-items: center;
+}
+
+#about .container .photo img{
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+
+/* _______________________CONTACT_________________________ */ 
+#contact .container{
+    width: 70%;
+}
+
+#contact .container .box{
+    padding: 0;
+}
+
+#contact .container .box input, 
+#contact .container .box textarea{
+    outline: none;
+    border: 2px solid var(--dark-col);
+    background: var(--bg2-col);
+    color: var(--dark-col);
+    padding: 5px;
+    resize: none;
+    transition: var(--tran-time);
+}
+
+#contact .container .box input:focus, 
+#contact .container .box textarea:focus{
+    background: var(--font-col);
+    box-shadow: 0px 12px 5px -9px var(--dark-col);
+}
+
+#contact .container .box input::placeholder, 
+#contact .container .box textarea::placeholder{
+    font-style: italic;
+}
+
+#contact .container .box .req{
+    color:var(--bg2-col);
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+/* _______________________FOOTER_________________________ */ 
+footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background: var(--dark-col);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding: 1vw 5vw;
+}
+
+
+/* _______________________RESPONSIVE_________________________ */ 
+@media (max-width: 1200px){
+    #cars .container{
+        width: 90%
+    }
+}
+
+
+@media (max-width: 1024px){
+    .menu-btn{
+        opacity: 1;
+    }
+
+    nav ul{
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1024px){
+    #cars{
+        height: 150vh;
+    }
+
+    #cars .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px){
+    .single-details{
+        flex-direction: column;
+    }
+    
+    .details-box{
+        height: 50%;
+        width: 100%;
+        padding: 0 2vw;
+    }
+}
+
+
+@media (max-width: 500px){
+    .container{
+        flex-direction: column;
+    }
+    
+    .box{
+        height: 50%;
+        width: 100%;
+        padding: 0 2vw;
+    }
+
+    .us{
+        gap: 2vw;
+    }
+
+    .us p, .heading h3{
+        line-height: 2;
+    }
+
+    #contact{
+        height: 150vh;
+    }
+
+    .col-box{
+        display: none;
+    }
+}

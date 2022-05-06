@@ -1,0 +1,115 @@
+
+section .container .photo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container .photo ul{
+    list-style: none;
+}
+  
+section .container .photo .slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.2s opacity ease-in-out;
+    transition-delay: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container .photo .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: grayscale(30%);
+}
+
+section .container .photo .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+section .container .photo .carousel-button {
+    position: absolute;
+    background: var(--cta-col);
+    border: 1px solid var(--font-col);
+    color: var(--font-col);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var( --h3-size);
+    cursor: pointer;
+    z-index: 2;
+	padding: 1vw;
+    transition: var(--tran-time);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container .photo .carousel-button:hover{
+    background: var(--cta-col-hov);
+}
+
+section .container .photo .carousel-button.prev{
+    left: 0;
+}
+
+section .container .photo .carousel-button.next{
+    right: 0;
+}
+
+section .container .desc .desc-book .description,
+section .container .box .desc-book .booking{
+	height: 50%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: left;
+}
+
+section .container .desc .desc-book{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: 4vw;
+}
+
+section .container .box .desc-book .description .single-description{
+	display: flex;
+	gap: 5vw;
+	text-align: justify;
+}
+
+section .container .box .desc-book .description .single-description ol li{
+	list-style: circle;
+}
+
+section .container .box .desc-book .booking{
+	justify-content: center;
+	gap: 2px;
+}
+
+section .container .box .desc-book .booking .cta{
+	margin-top: 2vw;
+}
+
+section .container .box .desc-book .booking input{
+	width: 50%;
+	outline: none;
+    border: 2px solid var(--dark-col);
+    background: var(--bg2-col);
+    color: var(--dark-col);
+    padding: 5px;
+}
+
+section .container .box .desc-book .booking label{
+	margin-top: 5px;
+}
+

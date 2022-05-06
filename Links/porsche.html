@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche 911</title>
+    <link rel="icon" href="../Assets/Wrench-logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="menu-btn" id="toggle">MENU</div>
+    <nav id="menu">
+        <div class="logo" id="logo"><a href="../index.html#home">Classic <i class="fa fa-wrench" aria-hidden="true"></i> Garage</a></div>
+        <ul>
+            <a href="../index.html#cars">Our Cars</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+        </ul>
+    </nav>
+
+    <section aria-label="Newest Photos">
+        <div class="container single-details">
+            <div class="box details-box  photo" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="../Assets/Porsche/1.jpeg" alt="Image1">
+                    </li>
+                    <li class="slide">
+                        <img src="../Assets/Porsche/2.jpeg" alt="Image2">
+                    </li>
+                    <li class="slide">
+                        <img src="../Assets/Porsche/3.jpeg" alt="Image3">
+                    </li>
+                    <li class="slide">
+                        <img src="../Assets/Porsche/4.jpeg" alt="Image4">
+                    </li>
+                </ul>
+            </div>
+            <div class="box details-box desc">
+                <div class="desc-book">
+                    <div class="description">
+                        <h2>1989 Porsche 964 Carrera</h2>
+                        <div class="facts single-description">
+                            <ol>
+                                <li>3.6L 247hp</li>
+                                <li>Tiptronic automatic</li>
+                                <li>Six cylinder</li>
+                            </ol>
+                            <ol>
+                                <li>Room for max 2 ppl</li>
+                                <li>Fully restored</li>
+                                <li>Color: Black</li>
+                            </ol>
+                        </div>
+                        <p>The one and only German car: Porsche. The design of this 964 is just sexy, the sound is distinctive and the driving
+                            experience is just fast and smooth. This car guarantees love from everyone, even those who are not into cars.
+                        </p>
+                        <p>Check for <a href="" class="intext-btn">prices</a></p>
+                    </div>
+                    <div class="booking">
+                        <label for="input">Book from:</label>
+                        <input type="date">
+                        <label for="input">Until:</label>
+                        <input type="date">
+                        <a href="#" class="cta">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>FAQ</span>
+        <span><a href="#contact">Contact</a></span>
+        <span><a href="">Prices</a></span>
+        <span>Legal</span>
+        <span>&#169; by Classic Garage</span>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
